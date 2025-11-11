@@ -35,7 +35,6 @@ OrderId MatchingEngineCore::submitOrder(
         orderToSymbol_[orderId] = symbol;
     }
     
-    // Notify order received
     notifyOrder(order);
     
     // Match order
