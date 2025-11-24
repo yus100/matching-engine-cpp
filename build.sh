@@ -1,5 +1,5 @@
 #!/bin/bash
-# Build script for Linux/Unix/MacOS
+#Build script for Linux/Unix/MacOS
 
 set -e
 
