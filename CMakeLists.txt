@@ -73,6 +73,13 @@ install(TARGETS matching_server matching_client matching_engine_core
 
 install(DIRECTORY include/ DESTINATION include)
 
+# Tests
+option(BUILD_TESTS "Build tests" ON)
+if(BUILD_TESTS)
+    enable_testing()
+    add_subdirectory(tests)
+endif()
+
 # Print configuration
 message(STATUS "")
 message(STATUS "========================================")
@@ -81,6 +88,7 @@ message(STATUS "========================================")
 message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 message(STATUS "C++ standard: ${CMAKE_CXX_STANDARD}")
 message(STATUS "Compiler: ${CMAKE_CXX_COMPILER_ID}")
+message(STATUS "Build tests: ${BUILD_TESTS}")
 message(STATUS "========================================")
 message(STATUS "")
 

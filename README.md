@@ -67,9 +67,28 @@ include/          headers for everything
 src/             implementations
   main_server.cpp   server entry point
   main_client.cpp   client with interactive CLI
+tests/           comprehensive test suite
 ```
 
 Core components: Order, OrderBook, MatchingEngine, plus Server/Client for networking.
+
+## Testing
+
+Run the comprehensive test suite (150+ tests):
+
+```bash
+./run_tests.sh      # linux/mac
+run_tests.bat       # windows
+```
+
+Or manually:
+```bash
+cd build
+./matching_engine_tests                    # run all tests
+./matching_engine_tests --gtest_filter=OrderBookTest.*  # specific tests
+```
+
+See `tests/README.md` for detailed test documentation.
 
 ## Requirements
 

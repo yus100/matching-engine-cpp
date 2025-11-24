@@ -3,6 +3,8 @@ build/
 cmake-build-*/
 out/
 
+*.md
+
 # Compiled binaries
 *.exe
 *.out
@@ -57,4 +59,13 @@ Makefile
 # Debug files
 *.dSYM/
 *.pdb
+
+# Test artifacts
+test-results.xml
+*.gcov
+*.gcno
+*.gcda
+Testing/
+_deps/
+googletest-*/
 
